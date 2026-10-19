@@ -1,56 +1,76 @@
 Retail Fuel Sales – Data Vault 1.0 & 2.0
 
 **Overview**
-This project demonstrates the design and implementation of Data Vault 1.0 and Data Vault 2.0 for a retail fuel sales analytics use case.
+This portfolio project demonstrates the design of a Data Vault-based data warehouse for a fictional Retail Fuel Sales analytics use case.
 
-The objective is to demonstrate scalable historical data modeling using Hub, Link and Satellite structures.
+The project illustrates Data Vault 1.0 and Data Vault 2.0 modelling concepts using Hub, Link and Satellite structures, with a focus on historical data tracking, scalability and auditable data integration.
 
 **Technology Stack**
-AWS S3
+Amazon S3
 AWS EMR
 Apache Spark / PySpark
 Amazon Redshift
 SQL
 
 **Architecture**
-Source Systems -> AWS S3 -> AWS EMR / Spark -> Staging Layer -> Raw Data Vault -> Business Vault -> Amazon Redshift -> Analytics / Reporting
+Source Systems -> Amazon S3 -> AWS EMR / Spark -> Staging Layer -> Raw Data Vault -> Business Vault -> Amazon Redshift -> Analytics / Reporting
 
 **Data Vault Components**
-Hubs
+**Hubs**
 HUB_CUSTOMER
 HUB_PRODUCT
 HUB_STATION
 HUB_TRANSACTION
-
-Links
+**Links**
 LINK_SALES_TRANSACTION
 LINK_CUSTOMER_TRANSACTION
-
-Satellites
+**Satellites**
 SAT_CUSTOMER
 SAT_PRODUCT
 SAT_STATION
 SAT_TRANSACTION
 
+
 **Data Vault 1.0**
-The DV 1.0 implementation demonstrates:
+The Data Vault 1.0 design demonstrates:
 
 Business Keys
-Hub / Link / Satellite architecture
+Hub, Link and Satellite modelling
 Historical tracking
-Load Date
+Load Date / Load Timestamp
 Record Source
-Data Vault 2.0
+Insert-only historical storage
 
-**The DV 2.0 implementation extends the model with:**
+
+**Data Vault 2.0**
+The Data Vault 2.0 design extends the model with:
 
 Hash Keys
-HashDiff
-Parallel loading
-PIT tables
-Scalable ELT processing
-Documentation
-Detailed architecture and implementation documentation is available under the /docs directory.
+HashDiff-based change detection
+Parallel loading concepts
+PIT (Point-in-Time) tables
+Scalable processing using Spark / PySpark
+Raw Vault and Business Vault concepts
+
+**Key Learning Areas Demonstrated**
+This project covers:
+
+Identification of business keys
+Modelling Hubs, Links and Satellites
+Historical data management
+Data Vault 1.0 vs Data Vault 2.0
+Hash Key generation
+HashDiff-based change detection
+PIT table concepts
+Raw Vault and Business Vault
+Integration with an AWS-based data architecture
+Transformation toward an analytics/reporting layer
+
+**Project Documentation**
+Detailed Data Vault modelling, architecture, loading concepts and implementation examples are available in:
+Data_Vault_1_and_2_GitHub_Project_Anand.docx
 
 **Purpose**
-This is a portfolio project created to demonstrate Data Vault architecture and data-modeling concepts.
+This is a self-developed portfolio project created to demonstrate Data Vault modelling and data architecture concepts.
+
+The business scenario and sample datasets used in this project are fictional/synthetic and are intended solely for learning and portfolio demonstration purposes.
